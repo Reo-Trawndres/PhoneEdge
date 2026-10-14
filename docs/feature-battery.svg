@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" role="img" aria-labelledby="t" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
+  <title id="t">Battery at a glance: the PhoneEdge tray icon fills up with the phone's battery level, green, amber or red, and shows a Wi-Fi sign while the link runs over Wi-Fi.</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <clipPath id="tile"><rect width="80" height="80" rx="17.5"/></clipPath>
+  </defs>
+
+  <rect width="600" height="340" rx="20" fill="url(#bg)"/>
+  <text x="28" y="46" font-size="24" font-weight="600" fill="#e2e8f0">Battery at a glance</text>
+
+  <!-- zoomed taskbar tray -->
+  <rect x="28" y="104" width="544" height="120" rx="16" fill="#0b1220" stroke="#334155" stroke-width="1.5"/>
+  <path d="M45,168 l7,-7 l7,7" fill="none" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="556" y="171" font-size="18" text-anchor="end" fill="#e2e8f0">9:41</text>
+
+  <!-- the tray icon: a tile that fills up like a glass (no number on it) -->
+  <g transform="translate(74 124)">
+    <rect width="80" height="80" rx="17.5" fill="#3a3a3a"/>
+    <rect y="15" width="80" height="65" fill="#1d8136" clip-path="url(#tile)"/>
+  </g>
+  <g transform="translate(184 124)">
+    <rect width="80" height="80" rx="17.5" fill="#3a3a3a"/>
+    <rect y="50" width="80" height="30" fill="#9e7200" clip-path="url(#tile)"/>
+  </g>
+  <g transform="translate(294 124)">
+    <rect width="80" height="80" rx="17.5" fill="#3a3a3a"/>
+    <rect y="70" width="80" height="10" fill="#9e2a23" clip-path="url(#tile)"/>
+  </g>
+  <g transform="translate(404 124)">
+    <rect width="80" height="80" rx="17.5" fill="#3a3a3a"/>
+    <rect y="30" width="80" height="50" fill="#1d8136" clip-path="url(#tile)"/>
+    <g fill="none" stroke="#ffffff" stroke-width="8.5" stroke-linecap="round">
+      <path d="M13.13,35.63 A38,38 0 0 1 66.87,35.63"/>
+      <path d="M24.8,47.3 A21.5,21.5 0 0 1 55.2,47.3"/>
+    </g>
+    <circle cx="40" cy="62.5" r="7" fill="#ffffff"/>
+  </g>
+
+  <!-- labels -->
+  <g text-anchor="middle">
+    <g font-size="20" font-weight="600">
+      <text x="114" y="260" fill="#30d158">80%</text>
+      <text x="224" y="260" fill="#ffb800">35%</text>
+      <text x="334" y="260" fill="#ff453a">12%</text>
+      <text x="444" y="260" fill="#30d158">65%</text>
+    </g>
+    <g font-size="15" fill="#94a3b8">
+      <text x="114" y="282">good</text>
+      <text x="224" y="282">getting low</text>
+      <text x="334" y="282">charge soon</text>
+      <text x="444" y="282">on Wi-Fi</text>
+    </g>
+  </g>
+</svg>

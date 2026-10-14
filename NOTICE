@@ -1,0 +1,80 @@
+PhoneEdge
+Copyright 2026 ReoTrawndres
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+----------------------------------------------------------------------
+
+This product includes code adapted from scrcpy
+(https://github.com/Genymobile/scrcpy),
+Copyright (C) Genymobile and Romain Vimont,
+licensed under the Apache License, Version 2.0.
+
+Adapted code: agent/src/phoneedge/FakeContext.java,
+agent/src/phoneedge/Workarounds.java, and the settings access in
+agent/src/phoneedge/PhoneExtras.java (each file says what was taken).
+
+PhoneEdge runs the unmodified scrcpy-server on the phone at runtime.
+
+----------------------------------------------------------------------
+
+Binary releases of PhoneEdge also include:
+
+- scrcpy-server 5.0.1, from scrcpy (Apache License 2.0).
+- adb (adb.exe, AdbWinApi.dll, AdbWinUsbApi.dll), from the Android SDK
+  Platform-Tools as shipped in the scrcpy 5.0.1 Windows release.
+- NAudio.Core and NAudio.Wasapi 2.2.1 (https://github.com/naudio/NAudio),
+  Copyright (C) Mark Heath and contributors, MIT License.
+- Whisper.net 1.9.1 (https://github.com/sandrohanea/whisper.net), Copyright
+  (c) 2024 sandrohanea, MIT License (licenses\Whisper.net-LICENSE.txt), and
+  the .NET libraries it needs (Microsoft.Extensions.AI.Abstractions,
+  System.Text.Json, System.Text.Encodings.Web, System.IO.Pipelines),
+  Copyright (c) .NET Foundation and Contributors, MIT License.
+- Not included, downloaded when Claude is used (Settings > Voice & AI > AI brain > My own AI > Claude, with the user's own API
+  key): the Anthropic C# SDK 12.55.0 (Anthropic.dll; https://github.com/anthropics/anthropic-sdk-csharp), Copyright 2026
+  Anthropic, MIT License (licenses\Anthropic-SDK-LICENSE.txt), and System.Net.ServerSentEvents 10.0.1, Copyright (c) .NET
+  Foundation and Contributors, MIT License: the unmodified lib/net8.0 files of their official packages on nuget.org, each
+  checked against a pinned SHA-256, kept per user in %LOCALAPPDATA%\PhoneEdge\addons\anthropic.
+- Not included, downloaded only when asked (Settings > Voice & AI > Speech
+  model): Whisper.net's unmodified native runtimes for Windows x64, from
+  its official Whisper.net.Runtime and Whisper.net.Runtime.Vulkan 1.9.1
+  packages on nuget.org: whisper.cpp and ggml
+  (https://github.com/ggml-org/whisper.cpp), Copyright (c) 2023-2026 The ggml
+  authors, MIT License (licenses\whisper.cpp-LICENSE.txt); and OpenAI's
+  Whisper speech models (large-v3-turbo or small) in whisper.cpp's format,
+  Copyright (c) 2022 OpenAI, MIT License (licenses\Whisper-models-LICENSE.txt).
+- Not included, downloaded only when asked (Settings > Voice & AI > AI brain >
+  Download): llama.cpp and ggml build b11429 (llama-server and its libraries;
+  https://github.com/ggml-org/llama.cpp), Copyright (c) 2023-2026 The ggml
+  authors, MIT License (licenses\llama.cpp-LICENSE.txt), unmodified from its
+  official "bin-win-vulkan-x64" release zip, which also holds LLVM's OpenMP
+  runtime (libomp.dll), Apache License 2.0 with LLVM Exceptions; and the AI
+  brain's models from their makers on Hugging Face, each Apache License 2.0
+  (licenses\AI-brain-models-LICENSE.txt): Ministral 3 3B Instruct 2512 by
+  Mistral AI, Qwen3 8B by the Qwen team (Alibaba Cloud), and Gemma 4 12B it
+  by Google. Each file is checked against a pinned SHA-256 and kept per user
+  in %LOCALAPPDATA%\PhoneEdge (addons\brain, models\brain).
+- Not included, downloaded only when asked (Settings > Voice & AI > Speech model > Cohere Arabic): transcribe.cpp v0.4.0
+  and ggml (transcribe.dll and its libraries; https://github.com/handy-computer/transcribe.cpp), Copyright (c) 2026 The
+  transcribe.cpp authors and (c) 2023-2026 The ggml authors, MIT License (licenses\transcribe.cpp-LICENSE.txt), unmodified
+  from its official "windows-x86_64-cpu-vulkan" release; Cohere Transcribe Arabic 07-2026 by Cohere Labs
+  (https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026), Apache License 2.0
+  (licenses\Cohere-Transcribe-Arabic-LICENSE.txt), as a GGUF converted and quantized to 8 bits by transcribe.cpp's makers
+  (https://huggingface.co/handy-computer/cohere-transcribe-arabic-07-2026-gguf); Silero VAD v6.2.0 by the Silero Team, MIT
+  License (licenses\Silero-VAD-LICENSE.txt), in whisper.cpp's ggml format (https://huggingface.co/ggml-org/whisper-vad); and
+  SpeechBrain's VoxLingua107 ECAPA-TDNN language ID, Apache License 2.0, trained on VoxLingua107 (CC BY 4.0)
+  (licenses\VoxLingua107-ECAPA-LICENSE.txt), as a GGUF by transcribe.cpp's makers
+  (https://huggingface.co/handy-computer/lang-id-voxlingua107-ecapa-gguf). Each file is checked against a pinned SHA-256 and
+  kept per user in %LOCALAPPDATA%\PhoneEdge (addons\transcribe, models).
+- The scrcpy 5.0.1 app (scrcpy\scrcpy.exe; Apache License 2.0) and the
+  libraries it ships with, unmodified, from the scrcpy 5.0.1 Windows release
+  (https://github.com/Genymobile/scrcpy/releases/tag/v5.0.1):
+  - SDL3 (SDL3.dll), https://github.com/libsdl-org/SDL, zlib License
+    (licenses\SDL3-LICENSE.txt);
+  - FFmpeg (avcodec-63.dll, avformat-63.dll, avutil-61.dll,
+    swresample-7.dll), https://ffmpeg.org, GNU LGPL 2.1 or later;
+  - libusb (libusb-1.0.dll), https://libusb.info, GNU LGPL 2.1 or later.
+  The LGPL text is in licenses\LGPL-2.1.txt. The exact sources and build
+  scripts of these libraries are in the scrcpy repository at tag v5.0.1
+  (https://github.com/Genymobile/scrcpy/tree/v5.0.1/app/deps); they are
+  separate files and can be replaced with compatible builds.

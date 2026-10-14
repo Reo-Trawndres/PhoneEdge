@@ -1,0 +1,11 @@
+Cohere Transcribe Arabic 07-2026 (Settings > Voice & AI > Speed or accuracy > Cohere Arabic), the speech model -
+https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026, by Cohere Labs.
+
+Licensed under the Apache License, Version 2.0 (the same licence as PhoneEdge: see LICENSE, or
+https://www.apache.org/licenses/LICENSE-2.0).
+
+PhoneEdge does not include it and does not use that repository's files: the model is fetched only when you click Download,
+as a GGUF file converted from Cohere Labs' official checkpoint and quantized to 8 bits (Q8_0) by the makers of transcribe.cpp
+(https://huggingface.co/handy-computer/cohere-transcribe-arabic-07-2026-gguf, public, no sign-in), at a fixed revision, checked
+against a pinned SHA-256, and kept per user in %LOCALAPPDATA%\PhoneEdge\models. It is data: PhoneEdge never runs it as code.
+It is run by transcribe.cpp (see transcribe.cpp-LICENSE.txt).

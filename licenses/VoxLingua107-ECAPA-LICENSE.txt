@@ -1,0 +1,13 @@
+VoxLingua107 ECAPA-TDNN language ID (lang-id-voxlingua107-ecapa-Q8_0.gguf: which language a dictation is in, for hold to write
+with Cohere Arabic; not part of PhoneEdge's download: fetched only when you click Download in Settings > Voice & AI > Speed or
+accuracy > Cohere Arabic) - https://huggingface.co/speechbrain/lang-id-voxlingua107-ecapa, by SpeechBrain.
+
+Licensed under the Apache License, Version 2.0 (the same licence as PhoneEdge: see LICENSE, or
+https://www.apache.org/licenses/LICENSE-2.0). It was trained on the VoxLingua107 dataset (Valk and Alumae;
+https://cs.taltech.ee/staff/tanel.alumae/data/voxlingua107/), licensed under Creative Commons Attribution 4.0 (CC BY 4.0,
+https://creativecommons.org/licenses/by/4.0/).
+
+PhoneEdge fetches a GGUF file converted from SpeechBrain's checkpoint and quantized to 8 bits (Q8_0) by the makers of
+transcribe.cpp (https://huggingface.co/handy-computer/lang-id-voxlingua107-ecapa-gguf, public, no sign-in), at a fixed revision,
+checked against a pinned SHA-256, and keeps it per user in %LOCALAPPDATA%\PhoneEdge\models. It is data: PhoneEdge never runs it
+as code. It is run by transcribe.cpp (see transcribe.cpp-LICENSE.txt), on the processor.

@@ -1,0 +1,10 @@
+AI brain models (Settings > Voice & AI > AI brain: Light, Standard, Best), in llama.cpp's GGUF
+format, the official files of their makers on Hugging Face at a fixed revision; not part of PhoneEdge's download:
+fetched only when you pick a size and click Download, checked against a pinned SHA-256:
+
+- Light: Ministral 3 3B Instruct 2512 (Q4_K_M) by Mistral AI - https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512-GGUF
+- Standard: Qwen3 8B (Q4_K_M) by the Qwen team (Alibaba Cloud) - https://huggingface.co/Qwen/Qwen3-8B-GGUF
+- Best: Gemma 4 12B it (QAT Q4_0) by Google - https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf
+
+All three are licensed under the Apache License, Version 2.0 (the same licence as PhoneEdge: see LICENSE, or
+https://www.apache.org/licenses/LICENSE-2.0); for Gemma 4 see also https://ai.google.dev/gemma/docs/gemma_4_license.

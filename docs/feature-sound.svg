@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" role="img" aria-labelledby="t" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
+  <title id="t">Sound where you want it: keep phone and PC sound separate, play the phone's sound on the PC, or the PC's sound on the phone. Ctrl+Alt+S switches.</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="feed" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#f472b6"/>
+      <stop offset="0.5" stop-color="#fb923c"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="scr"><rect x="35" y="93" width="276" height="150" rx="4"/></clipPath>
+    <clipPath id="ps"><rect x="484" y="85" width="84" height="180" rx="10"/></clipPath>
+    <marker id="head" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#22c55e"/>
+    </marker>
+    <g id="note">
+      <ellipse cx="-5" cy="8" rx="4.2" ry="3.2" transform="rotate(-20 -5 8)"/>
+      <ellipse cx="8" cy="5" rx="4.2" ry="3.2" transform="rotate(-20 8 5)"/>
+      <path d="M-1.5,7.5 V-8 L11.5,-11 V4.5 H9.5 V-6.5 L0.5,-4.5 V7.5 Z"/>
+    </g>
+  </defs>
+
+  <rect width="600" height="340" rx="20" fill="url(#bg)"/>
+  <text x="28" y="46" font-size="24" font-weight="600" fill="#e2e8f0">Sound where you want it</text>
+
+  <!-- key hint -->
+  <g font-size="14" font-weight="600" text-anchor="middle" fill="#e2e8f0">
+    <g fill="#1e293b" stroke="#475569" stroke-width="1.5">
+      <rect x="432" y="24" width="44" height="28" rx="7"/>
+      <rect x="490" y="24" width="38" height="28" rx="7"/>
+      <rect x="542" y="24" width="30" height="28" rx="7"/>
+    </g>
+    <text x="454" y="43">Ctrl</text>
+    <text x="509" y="43">Alt</text>
+    <text x="557" y="43">S</text>
+    <g font-size="16" font-weight="400" fill="#94a3b8"><text x="483" y="44">+</text><text x="535" y="44">+</text></g>
+  </g>
+
+  <!-- PC monitor -->
+  <rect x="28" y="86" width="290" height="164" rx="10" fill="#0b1220" stroke="#334155" stroke-width="2"/>
+  <g clip-path="url(#scr)">
+    <rect x="35" y="93" width="276" height="150" fill="url(#wall)"/>
+    <!-- volume flyout: the PC is playing -->
+    <rect x="113" y="117" width="120" height="88" rx="12" fill="#0f172a" opacity="0.6"/>
+    <rect x="152" y="142" width="9" height="16" rx="1.5" fill="#ffffff"/>
+    <path d="M160,142 L174,131 V169 L160,158 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+    <g fill="none" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)">
+      <path d="M181.8,143.1 A9,9 0 0 1 181.8,156.9"/>
+      <path d="M186.9,137 A17,17 0 0 1 186.9,163"/>
+      <path d="M192.1,130.8 A25,25 0 0 1 192.1,169.2"/>
+    </g>
+    <rect x="131" y="183" width="84" height="4" rx="2" fill="#ffffff" opacity="0.25"/>
+    <rect x="131" y="183" width="60" height="4" rx="2" fill="#22c55e"/>
+    <circle cx="191" cy="185" r="5.5" fill="#ffffff"/>
+    <!-- taskbar -->
+    <rect x="35" y="229" width="276" height="14" fill="#0f172a" opacity="0.88"/>
+    <rect x="152" y="232" width="8" height="8" rx="2" fill="#60a5fa"/>
+    <rect x="164" y="232" width="8" height="8" rx="2" fill="#94a3b8"/>
+    <rect x="176" y="232" width="8" height="8" rx="2" fill="#94a3b8"/>
+    <rect x="188" y="232" width="8" height="8" rx="2" fill="#94a3b8"/>
+    <rect x="296" y="232" width="8" height="8" rx="2" fill="#3a3a3a"/>
+    <rect x="296" y="235" width="8" height="5" rx="1.5" fill="#1d8136"/>
+  </g>
+  <rect x="160" y="250" width="26" height="14" fill="#334155"/>
+  <rect x="123" y="263" width="100" height="6" rx="3" fill="#475569"/>
+
+  <!-- phone sound travels to the PC -->
+  <path d="M470,146 Q399,92 330,146" fill="none" stroke="#22c55e" stroke-width="3" stroke-dasharray="7 8" stroke-linecap="round" marker-end="url(#head)"/>
+  <use href="#note" transform="translate(397 100) scale(0.8)" fill="#22c55e" filter="url(#glow)"/>
+
+  <!-- phone -->
+  <rect x="480" y="81" width="92" height="188" rx="14" fill="#0b1220" stroke="#475569" stroke-width="2"/>
+  <g clip-path="url(#ps)">
+    <rect x="484" y="85" width="84" height="180" fill="url(#feed)"/>
+    <circle cx="538" cy="141" r="28" fill="#ffffff" opacity="0.10"/>
+    <circle cx="502" cy="197" r="20" fill="#ffffff" opacity="0.08"/>
+    <rect x="484" y="85" width="84" height="180" fill="url(#shade)"/>
+    <g fill="#ffffff" opacity="0.92">
+      <circle cx="555" cy="203" r="6"/>
+      <circle cx="555" cy="221" r="6"/>
+      <circle cx="555" cy="239" r="6"/>
+    </g>
+    <rect x="490" y="236" width="38" height="4" rx="2" fill="#ffffff" opacity="0.9"/>
+    <rect x="490" y="244" width="52" height="3.5" rx="1.75" fill="#ffffff" opacity="0.7"/>
+    <rect x="491" y="91" width="13" height="4" rx="2" fill="#ffffff"/>
+    <rect x="553" y="91" width="9" height="4.5" rx="1.2" fill="none" stroke="#ffffff" stroke-width="0.9"/>
+    <circle cx="526" cy="93" r="2.6" fill="#0b1220"/>
+    <circle cx="526" cy="160" r="17" fill="#ffffff" opacity="0.92"/>
+    <use href="#note" transform="translate(524.5 160) scale(0.85)" fill="#7c3aed"/>
+    <rect x="514" y="258" width="24" height="2" rx="1" fill="#ffffff" opacity="0.75"/>
+  </g>
+
+  <!-- modes -->
+  <g font-size="15" text-anchor="middle">
+    <rect x="130" y="283" width="92" height="30" rx="15" fill="#0b1220" stroke="#334155" stroke-width="1.5"/>
+    <text x="176" y="303" fill="#94a3b8">Separate</text>
+    <rect x="232" y="283" width="114" height="30" rx="15" fill="#22c55e" filter="url(#glow)"/>
+    <text x="289" y="303" fill="#052e16" font-weight="600">Phone → PC</text>
+    <rect x="356" y="283" width="114" height="30" rx="15" fill="#0b1220" stroke="#334155" stroke-width="1.5"/>
+    <text x="413" y="303" fill="#94a3b8">PC → phone</text>
+  </g>
+</svg>

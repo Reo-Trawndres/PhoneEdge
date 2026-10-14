@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="1200" height="580" role="img" aria-labelledby="t">
+  <title id="t">PhoneEdge: push your PC mouse past the screen edge and it controls your Android phone</title>
+  <style>
+    /* One 7 s loop. Without animation (reduced motion) this is the plain static picture. */
+    .cur{animation:cur 7s infinite}
+    .edge{animation:edge 7s infinite}
+    .dash{animation:dash 7s linear infinite}
+    .spark{animation:spark 7s infinite}
+    .pp{animation:pp 7s infinite}
+    .ring1,.ring2{transform-box:fill-box;transform-origin:center}
+    .ring1{animation:ring1 7s infinite}
+    .ring2{animation:ring2 7s infinite}
+    .feed{animation:feed 7s infinite}
+    .again{animation:again 7s infinite}
+    @keyframes cur{
+      0%{opacity:0;transform:translate(-210px,70px)}
+      5%{opacity:1;transform:translate(-210px,70px);animation-timing-function:cubic-bezier(.45,0,.7,1)}
+      25%{opacity:1;transform:translate(56px,6px)}
+      26%,100%{opacity:0;transform:translate(56px,6px)}
+    }
+    @keyframes edge{0%,23%{opacity:.15} 25.5%,86%{opacity:1} 93%,100%{opacity:.15}}
+    @keyframes dash{from{stroke-dashoffset:0} to{stroke-dashoffset:-210}}
+    @keyframes spark{
+      0%,22.5%{opacity:0;stroke-dashoffset:20}
+      23%{opacity:1;stroke-dashoffset:20;animation-timing-function:cubic-bezier(.4,0,.6,1)}
+      29.5%{opacity:1;stroke-dashoffset:-104}
+      30.5%,100%{opacity:0;stroke-dashoffset:-104}
+    }
+    @keyframes pp{
+      0%,28.5%{opacity:0;transform:translate(-18px,0);animation-timing-function:ease-out}
+      31%,43%{opacity:1;transform:translate(0,0);animation-timing-function:cubic-bezier(.45,0,.25,1)}
+      54%,84%{opacity:1;transform:translate(64px,40px)}
+      88%,100%{opacity:0;transform:translate(64px,40px)}
+    }
+    @keyframes ring1{
+      0%,29%{opacity:0;transform:scale(.3)}
+      29.5%{opacity:1;transform:scale(.3);animation-timing-function:cubic-bezier(.2,.6,.35,1)}
+      45%,100%{opacity:0;transform:scale(1.9)}
+    }
+    @keyframes ring2{
+      0%,32%{opacity:0;transform:scale(.3)}
+      32.5%{opacity:.8;transform:scale(.3);animation-timing-function:cubic-bezier(.2,.6,.35,1)}
+      49%,100%{opacity:0;transform:scale(1.5)}
+    }
+    @keyframes feed{
+      0%,58%{transform:translateY(0);animation-timing-function:cubic-bezier(.65,0,.35,1)}
+      68%,96%{transform:translateY(-450px);animation-timing-function:step-end}
+      97%,100%{transform:translateY(0)}
+    }
+    @keyframes again{0%,89%{opacity:0} 95%,97%{opacity:1} 100%{opacity:0}}
+    @media (prefers-reduced-motion:no-preference){.curclip{clip-path:url(#screen)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="feed" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#f472b6"/>
+      <stop offset="0.5" stop-color="#fb923c"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="feed2" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="glow" x="-200%" y="-10%" width="500%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="spk" filterUnits="userSpaceOnUse" x="700" y="140" width="300" height="130">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="screen"><rect x="86" y="66" width="688" height="376" rx="8"/></clipPath>
+    <clipPath id="phoneScreen"><rect x="910" y="50" width="210" height="450" rx="26"/></clipPath>
+    <marker id="head" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#22c55e"/>
+    </marker>
+    <path id="arrow" d="M0,0 V24 L6,18.5 L10.5,28 L14.5,26.2 L10,17 H18 Z"/>
+  </defs>
+
+  <rect width="1200" height="580" rx="24" fill="url(#bg)"/>
+
+  <!-- PC monitor -->
+  <g transform="translate(-20 0)">
+  <rect x="70" y="50" width="720" height="408" rx="18" fill="#0b1220" stroke="#334155" stroke-width="2"/>
+  <g clip-path="url(#screen)">
+    <rect x="86" y="66" width="688" height="376" fill="url(#wall)"/>
+    <!-- a window -->
+    <rect x="132" y="104" width="390" height="250" rx="10" fill="#f8fafc"/>
+    <rect x="132" y="104" width="390" height="34" rx="10" fill="#e2e8f0"/>
+    <rect x="132" y="124" width="390" height="14" fill="#e2e8f0"/>
+    <circle cx="152" cy="121" r="6" fill="#f87171"/>
+    <circle cx="172" cy="121" r="6" fill="#fbbf24"/>
+    <circle cx="192" cy="121" r="6" fill="#34d399"/>
+    <rect x="156" y="164" width="230" height="12" rx="6" fill="#cbd5e1"/>
+    <rect x="156" y="190" width="320" height="10" rx="5" fill="#e2e8f0"/>
+    <rect x="156" y="212" width="290" height="10" rx="5" fill="#e2e8f0"/>
+    <rect x="156" y="234" width="305" height="10" rx="5" fill="#e2e8f0"/>
+    <rect x="156" y="270" width="140" height="56" rx="8" fill="#dbeafe"/>
+    <rect x="312" y="270" width="140" height="56" rx="8" fill="#ede9fe"/>
+    <!-- taskbar -->
+    <rect x="86" y="408" width="688" height="34" fill="#0f172a" opacity="0.88"/>
+    <rect x="374" y="415" width="20" height="20" rx="5" fill="#60a5fa"/>
+    <rect x="402" y="415" width="20" height="20" rx="5" fill="#94a3b8"/>
+    <rect x="430" y="415" width="20" height="20" rx="5" fill="#94a3b8"/>
+    <rect x="458" y="415" width="20" height="20" rx="5" fill="#94a3b8"/>
+    <!-- tray: battery tile -->
+    <rect x="726" y="417" width="16" height="16" rx="4" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="728" y="424" width="12" height="7" rx="2" fill="#22c55e"/>
+  </g>
+  <!-- the green "you're on the phone" edge -->
+  <rect class="edge" x="771" y="70" width="4" height="368" rx="2" fill="#22c55e" filter="url(#glow)"/>
+  <!-- stand -->
+  <rect x="405" y="458" width="50" height="34" fill="#334155"/>
+  <rect x="330" y="490" width="200" height="12" rx="6" fill="#475569"/>
+
+  <!-- PC cursor heading for the edge (slides under the bezel when it crosses) -->
+  <g class="curclip">
+    <use class="cur" href="#arrow" x="722" y="226" fill="#ffffff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/>
+  </g>
+  </g>
+
+  <!-- crossing -->
+  <path class="dash" d="M738,236 Q855,160 952,236" fill="none" stroke="#22c55e" stroke-width="3" stroke-dasharray="7 8" stroke-linecap="round" marker-end="url(#head)"/>
+  <path class="spark" d="M738,236 Q855,160 952,236" pathLength="100" fill="none" stroke="#bbf7d0" stroke-width="4" stroke-dasharray="16 300" stroke-linecap="round" filter="url(#spk)" opacity="0"/>
+  <text x="850" y="152" text-anchor="middle" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="16" fill="#94a3b8">push past the edge</text>
+
+  <!-- phone -->
+  <g transform="translate(30 0)">
+  <rect x="900" y="40" width="230" height="470" rx="36" fill="#0b1220" stroke="#475569" stroke-width="2"/>
+  <g clip-path="url(#phoneScreen)">
+    <!-- the video feed: this video, and the next one waiting below -->
+    <g class="feed">
+      <g id="vid1">
+        <rect x="910" y="50" width="210" height="450" fill="url(#feed)"/>
+        <circle cx="1040" cy="190" r="70" fill="#ffffff" opacity="0.10"/>
+        <circle cx="960" cy="330" r="50" fill="#ffffff" opacity="0.08"/>
+      </g>
+      <rect x="910" y="500" width="210" height="450" fill="url(#feed2)"/>
+      <circle cx="980" cy="660" r="62" fill="#ffffff" opacity="0.12"/>
+      <circle cx="1072" cy="800" r="44" fill="#ffffff" opacity="0.09"/>
+      <circle cx="1060" cy="590" r="18" fill="#ffffff" opacity="0.10"/>
+    </g>
+    <!-- back to the first video at the loop point -->
+    <use class="again" href="#vid1" opacity="0"/>
+    <rect x="910" y="50" width="210" height="450" fill="url(#shade)"/>
+    <!-- side actions -->
+    <circle cx="1094" cy="320" r="15" fill="#ffffff" opacity="0.92"/>
+    <path d="M1094,328 l-7,-7 a4,4 0 0 1 7,-5 a4,4 0 0 1 7,5 z" fill="#f43f5e"/>
+    <circle cx="1094" cy="364" r="15" fill="#ffffff" opacity="0.92"/>
+    <rect x="1086" y="358" width="16" height="11" rx="3" fill="#64748b"/>
+    <circle cx="1094" cy="408" r="15" fill="#ffffff" opacity="0.92"/>
+    <path d="M1087,412 l7,-9 l7,9" fill="none" stroke="#64748b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- caption -->
+    <rect x="926" y="430" width="96" height="9" rx="4.5" fill="#ffffff" opacity="0.9"/>
+    <rect x="926" y="447" width="140" height="8" rx="4" fill="#ffffff" opacity="0.7"/>
+    <rect x="926" y="462" width="118" height="8" rx="4" fill="#ffffff" opacity="0.7"/>
+    <!-- status bar -->
+    <text x="928" y="74" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff">9:41</text>
+    <rect x="1086" y="65" width="18" height="9" rx="2.5" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+    <rect x="1088" y="67" width="11" height="5" rx="1" fill="#ffffff"/>
+    <circle cx="1015" cy="66" r="5" fill="#0b1220"/>
+    <!-- home bar -->
+    <rect x="985" y="486" width="60" height="4" rx="2" fill="#ffffff" opacity="0.75"/>
+  </g>
+
+  <!-- the phone's own pointer, pulsing as it arrives -->
+  <circle class="ring1" cx="944" cy="238" r="20" fill="none" stroke="#22c55e" stroke-width="2.5" opacity="0.8"/>
+  <circle class="ring2" cx="944" cy="238" r="30" fill="none" stroke="#22c55e" stroke-width="1.5" opacity="0.35"/>
+  <use class="pp" href="#arrow" x="938" y="232" fill="#ffffff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/>
+  </g>
+
+  <!-- tagline -->
+  <text x="600" y="546" text-anchor="middle" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="22" fill="#e2e8f0">Your PC mouse and keyboard on your Android phone. <tspan fill="#22c55e" font-weight="600">No app on the phone.</tspan></text>
+</svg>

@@ -1,0 +1,55 @@
+name: Bug report
+description: Something doesn't work as it should
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! PhoneEdge has only been tested on one phone so far, so your phone details help a lot.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: phone
+    attributes:
+      label: Phone model
+      placeholder: e.g. Samsung Galaxy S24, Pixel 8, Honor Magic V3
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Android version (and the maker's skin)
+      placeholder: e.g. Android 15 / One UI 7
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: e.g. Windows 11 24H2
+  - type: input
+    id: version
+    attributes:
+      label: PhoneEdge version
+      placeholder: e.g. 1.0.1 (zip from Releases), or built from source
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Connection
+      options:
+        - USB
+        - Wi-Fi
+        - Both / switching between them
+  - type: textarea
+    id: log
+    attributes:
+      label: Log (optional)
+      description: >
+        Tray menu → Open log, and paste the lines around the problem. Check them first: the log can contain your
+        phone's serial number and Wi-Fi IP address.
+      render: text
