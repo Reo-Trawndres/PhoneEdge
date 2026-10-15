@@ -6,5 +6,5 @@ fetched only when you pick a size and click Download, checked against a pinned S
 - Standard: Qwen3 8B (Q4_K_M) by the Qwen team (Alibaba Cloud) - https://huggingface.co/Qwen/Qwen3-8B-GGUF
 - Best: Gemma 4 12B it (QAT Q4_0) by Google - https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf
 
-All three are licensed under the Apache License, Version 2.0 (the same licence as PhoneEdge: see LICENSE, or
+All three are licensed under the Apache License, Version 2.0 (full text in Apache-2.0.txt in this folder, or
 https://www.apache.org/licenses/LICENSE-2.0); for Gemma 4 see also https://ai.google.dev/gemma/docs/gemma_4_license.

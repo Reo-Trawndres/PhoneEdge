@@ -165,6 +165,9 @@ isn't sent anywhere (unless you pick "My own AI" with a cloud service, below).
   the cursor is. It never presses Enter and never types into password boxes. Another key or Off: Settings → *Voice & AI*
   → **Hold to write**. Holding Right Shift for 8 seconds is also Windows' own Filter Keys shortcut: for long dictations,
   turn that off in Windows Settings → Accessibility → Keyboard → Filter keys.
+- **Voice language:** you're heard in the language your PC's keyboard is set to when you start talking (English or
+  Arabic), for voice commands, Hold to write and the phone's mic; a small EN / ع chip shows which. To let PhoneEdge
+  guess instead: Settings → *Voice & AI* → **Voice language** → *Detect it*.
 - **Recent commands** keeps what it heard (with the sound) and what it did, for 24 hours, on this PC only. Turn it off:
   Settings → *Voice & AI* → *Privacy* → **Keep for 24 hours**. **Memory** ("remember that…"): see and change what it
   knows in Settings → *Voice & AI*.
@@ -203,7 +206,8 @@ isn't sent anywhere (unless you pick "My own AI" with a cloud service, below).
   in Settings → *Notifications*), the **phone as a remote** (PhoneEdge on the phone → *Remote for the PC*: play/pause,
   tracks, the volume in 2 % steps or an exact number, **PC apps you pick** (Settings → *Phone extras* → *Apps on the
   phone*, with their real icons; the phone can only open those), slides, a touchpad (two fingers scroll and
-  right-click), Lock the PC; a small chip at the bottom right of the PC confirms each press; nothing happens while the
+  right-click), Lock the PC, **which output plays the PC's sound** (headphones, speakers, a monitor: for the whole PC or
+  one app, also on the widget and by voice); a small chip at the bottom right of the PC confirms each press; nothing happens while the
   PC is locked), **quick settings tiles** (Send to PC, Sound, Phone screen on PC) and a **home-screen widget**. Links
   from the phone can open in a browser of your choice (Settings → *Phone extras* → *Open links from the phone in*).
   "Controlled by" now shows its icon in the status bar, and Settings → *Phone extras* → *On the phone* can hide Android's
@@ -296,9 +300,9 @@ Edits to the file apply within a second (no restart needed).
 
 ## License and credits
 
-PhoneEdge up to version 2.0.1 was released under the [Apache License 2.0](LICENSE) (credits in [NOTICE](NOTICE)).
-Its source code is no longer published: this page has the guide and the [downloads](https://github.com/Reo-Trawndres/PhoneEdge/releases/latest).
-Third-party licenses are in [licenses/](licenses/) and come with every download.
+PhoneEdge is **free to use** (not open source): see [LICENSE](LICENSE). Versions up to and including 2.0.1 were released
+under the Apache License 2.0 ([licenses/Apache-2.0.txt](licenses/Apache-2.0.txt)). Credits are in [NOTICE](NOTICE), and the
+third-party licenses are in [licenses/](licenses/) and come with every download.
 
 - [scrcpy](https://github.com/Genymobile/scrcpy) (Apache 2.0): PhoneEdge runs its `scrcpy-server` on the phone for
   the virtual mouse and keyboard, and the helper adapts its way of getting a working Android context.
