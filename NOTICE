@@ -27,6 +27,10 @@ Binary releases of PhoneEdge also include:
   Platform-Tools as shipped in the scrcpy 5.0.1 Windows release.
 - NAudio.Core and NAudio.Wasapi 2.2.1 (https://github.com/naudio/NAudio),
   Copyright (C) Mark Heath and contributors, MIT License.
+- ZXing.Net 0.16.11 (https://github.com/micjahn/ZXing.Net), a port of ZXing
+  (https://github.com/zxing/zxing), Copyright (C) Michael Jahn and the ZXing
+  authors, Apache License 2.0 (licenses\Apache-2.0.txt): reads QR codes off
+  the PC's screen.
 - Whisper.net 1.9.1 (https://github.com/sandrohanea/whisper.net), Copyright
   (c) 2024 sandrohanea, MIT License (licenses\Whisper.net-LICENSE.txt), and
   the .NET libraries it needs (Microsoft.Extensions.AI.Abstractions,

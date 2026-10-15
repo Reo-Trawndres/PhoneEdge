@@ -80,6 +80,7 @@ Android the return-to-PC edge may need a slightly firmer push).
 | Click the tray icon (left or right) | The **PhoneEdge panel**: phone, battery and connection at a glance; buttons to control the phone, show its screen, open a phone window, turn its screen off; sound mode; Pause; Settings |
 | Copy on one side | Paste on the other (text clipboard sync) |
 | **Ctrl+Alt+M** | Show / hide your **phone screen in a window on the PC** (live, clickable, stays on top) |
+| **Ctrl+Alt+R** | Read the **QR code on the PC screen** (the one nearest the mouse) and open it **on the phone**, no camera: a link opens in its app (a Discord, Steam or Telegram login, a website), a Wi-Fi code joins that network, a text lands on the phone's clipboard. Also the panel's **Scan QR** button, or say "scan the QR code" / «امسح الكود» |
 
 While you're on the phone, a **green bar glows on the phone-side edge of every PC screen**, and a small **"Phone"** tag
 shows for a moment where you crossed. **On the phone, the mouse pointer pulses** (grows and shrinks) when it arrives.
@@ -261,6 +262,7 @@ until the phone reboots.
 | `ScreenOffWithPhoneWindows` | false | Phone's own screen off while phone windows are open (mouse on the PC); Settings → Phone screen |
 | `PcShortcutsOnPhone` | `Ctrl+Win, MouseX1, MouseX2` | Shortcuts that still go to PC apps while you're on the phone (Wispr Flow) |
 | `SoundHotkey` | `Ctrl+Alt+S` | Cycles the sound modes |
+| `QrHotkey` | `Ctrl+Alt+R` | Opens the QR code on the PC screen (nearest the mouse) on the phone |
 | `MirrorPosition` | `Right` | Where the phone screen window opens: Right / Middle / Left of the main screen |
 | `MirrorAlwaysOnTop` | true | Phone screen window stays above other windows |
 | `MirrorScreenOff` | false | Turn the phone's own screen off while it's shown on the PC |
@@ -307,6 +309,7 @@ third-party licenses are in [licenses/](licenses/) and come with every download.
 - [scrcpy](https://github.com/Genymobile/scrcpy) (Apache 2.0): PhoneEdge runs its `scrcpy-server` on the phone for
   the virtual mouse and keyboard, and the helper adapts its way of getting a working Android context.
 - [NAudio](https://github.com/naudio/NAudio) (MIT): PC sound capture.
+- [ZXing.Net](https://github.com/micjahn/ZXing.Net) (Apache 2.0): reads QR codes off the PC screen.
 - [Whisper.net](https://github.com/sandrohanea/whisper.net) and [whisper.cpp](https://github.com/ggml-org/whisper.cpp)
   (MIT), with OpenAI's [Whisper](https://github.com/openai/whisper) models (MIT): voice commands, understood on the PC
   (the engine and the models are downloaded when asked, not part of PhoneEdge's download).
