@@ -36,6 +36,11 @@ Binary releases of PhoneEdge also include:
   the .NET libraries it needs (Microsoft.Extensions.AI.Abstractions,
   System.Text.Json, System.Text.Encodings.Web, System.IO.Pipelines),
   Copyright (c) .NET Foundation and Contributors, MIT License.
+- ONNX Runtime's .NET API 1.30.0 (Microsoft.ML.OnnxRuntime.dll;
+  https://github.com/microsoft/onnxruntime), Copyright (c) Microsoft
+  Corporation, MIT License (licenses\ONNX-Runtime-LICENSE.txt), and the .NET
+  library it needs (System.Numerics.Tensors), Copyright (c) .NET Foundation
+  and Contributors, MIT License: they run Talk back's voice on this PC.
 - Not included, downloaded when Claude is used (Settings > Voice & AI > AI brain > My own AI > Claude, with the user's own API
   key): the Anthropic C# SDK 12.55.0 (Anthropic.dll; https://github.com/anthropics/anthropic-sdk-csharp), Copyright 2026
   Anthropic, MIT License (licenses\Anthropic-SDK-LICENSE.txt), and System.Net.ServerSentEvents 10.0.1, Copyright (c) .NET
@@ -72,6 +77,15 @@ Binary releases of PhoneEdge also include:
   (licenses\VoxLingua107-ECAPA-LICENSE.txt), as a GGUF by transcribe.cpp's makers
   (https://huggingface.co/handy-computer/lang-id-voxlingua107-ecapa-gguf). Each file is checked against a pinned SHA-256 and
   kept per user in %LOCALAPPDATA%\PhoneEdge (addons\transcribe, models).
+- Not included, downloaded only when asked (Settings > Voice & AI > Talk back > Voice on this PC): ONNX Runtime 1.30.0's
+  native engine for Windows x64 (onnxruntime.dll; https://github.com/microsoft/onnxruntime), Copyright (c) Microsoft
+  Corporation, MIT License (licenses\ONNX-Runtime-LICENSE.txt; the notices of the code built into it are in its package's
+  ThirdPartyNotices.txt), unmodified from Microsoft's official Microsoft.ML.OnnxRuntime package on nuget.org; and Supertonic 3
+  by Supertone Inc. (https://huggingface.co/Supertone/supertonic-3), its ONNX models, settings and two voice styles (F1, M1),
+  unmodified, BigScience Open RAIL-M License with its use restrictions (licenses\Supertonic-3-LICENSE.txt). PhoneEdge's code
+  that runs it follows Supertone's sample code (https://github.com/supertone-inc/supertonic), Copyright (c) 2025 Supertone
+  Inc., MIT License (same file). Each file is checked against a pinned SHA-256 and kept per user in %LOCALAPPDATA%\PhoneEdge
+  (addons\onnxruntime, models\talkback).
 - The scrcpy 5.0.1 app (scrcpy\scrcpy.exe; Apache License 2.0) and the
   libraries it ships with, unmodified, from the scrcpy 5.0.1 Windows release
   (https://github.com/Genymobile/scrcpy/releases/tag/v5.0.1):

@@ -166,6 +166,15 @@ isn't sent anywhere (unless you pick "My own AI" with a cloud service, below).
   the cursor is. It never presses Enter and never types into password boxes. Another key or Off: Settings → *Voice & AI*
   → **Hold to write**. Holding Right Shift for 8 seconds is also Windows' own Filter Keys shortcut: for long dictations,
   turn that off in Windows Settings → Accessibility → Keyboard → Filter keys.
+- **Hands-free** (2.2, off by default): talk to the PC without holding a key. Settings → *Voice & AI* → **Hands-free**:
+  *Say its name first* ("Effortless, open Steam", «إفورتلس، افتح ستيم»; the name can be Effortless, PhoneEdge or your
+  own) or *Just talk* (only clear commands like "open Steam" or "next song" are done; chat and questions are ignored).
+  It uses the microphone picked for hold to talk and pauses in full-screen games, while the PC is locked, while another
+  app uses the microphone and while PhoneEdge speaks. Nothing it hears is kept.
+- **Talk back** (2.2, off by default): the PC says its replies out loud. Settings → *Voice & AI* → **Talk back** →
+  *Download the voice* (about 400 MB, once, from Supertone's official page; then it works offline, on your PC).
+  **Arabic replies sound Iraqi**, the way people talk (or Standard Arabic), English ones English; the text on the screen
+  stays the same. Female or male voice; *After my voice commands*, *Answers only* or *Always*.
 - **Voice language:** you're heard in the language your PC's keyboard is set to when you start talking (English or
   Arabic), for voice commands, Hold to write and the phone's mic; a small EN / ع chip shows which. To let PhoneEdge
   guess instead: Settings → *Voice & AI* → **Voice language** → *Detect it*.
@@ -213,6 +222,10 @@ isn't sent anywhere (unless you pick "My own AI" with a cloud service, below).
   from the phone can open in a browser of your choice (Settings → *Phone extras* → *Open links from the phone in*).
   "Controlled by" now shows its icon in the status bar, and Settings → *Phone extras* → *On the phone* can hide Android's
   own "debugging connected" notice.
+- **Wake the PC from the phone** (2.2): while the PC sleeps, the phone's remote shows a **Wake the PC** card with one big button. On
+  Ethernet it wakes the PC from sleep (and from shut down if the BIOS allows it); on Wi-Fi from sleep only. Set it up
+  once: Settings → *Phone extras* → **Wake this PC from the phone** checks your PC and shows the steps (Device Manager;
+  PhoneEdge never changes them itself).
 - No cable at all? Settings → *Phone & Wi-Fi* → **Pair a phone** (Android 11+ Wireless debugging), then **Connect by IP address**.
 
 **Smooth Wi-Fi mode** (on by default; Settings → Phone & Wi-Fi): every mouse move goes out at once with its PC time, and
